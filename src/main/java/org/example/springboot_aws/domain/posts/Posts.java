@@ -3,13 +3,14 @@ package org.example.springboot_aws.domain.posts;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import org.example.springboot_aws.domain.BaseTimeEntity;
 
 import javax.persistence.*;
 
 @Getter
 @NoArgsConstructor
 @Entity // jpa 어노테이션. 테이블과 연결된 클래스
-public class Posts { // 카멜케이스 -> 테이블에서 언더스코어네이밍.
+public class Posts extends BaseTimeEntity { // 카멜케이스 -> 테이블에서 언더스코어네이밍.
 
     @Id // PK
     @GeneratedValue(strategy = GenerationType.IDENTITY) // PK 생성 규칙. auto_increment
