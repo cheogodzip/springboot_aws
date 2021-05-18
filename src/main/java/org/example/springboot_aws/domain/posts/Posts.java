@@ -29,4 +29,9 @@ public class Posts { // 카멜케이스 -> 테이블에서 언더스코어네이
         this.content = content;
         this.author = author;
     }
+
+    public void update(String title, String content) {
+        this.title = title;
+        this.content = content;
+    }
 }
